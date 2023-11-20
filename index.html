@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <h2>Parking Gonzalo's</h2>
     <form onsubmit="enviarEntrada(event);">
-      <input type="date" id="fechaSalida" name="fechaSalida" />
-      <input type="time" id="horaSalida" name="horaSalida" />
-      <input type="submit" />
+      <label for="fechaEntrada"
+        >Fecha entrada:
+        <input type="date" id="fechaEntrada" name="fechaEntrada" required />
+      </label>
+      <label>
+        Hora entrada:
+        <input type="time" id="horaEntrada" name="horaEntrada" required />
+      </label>
+      <label style="display: none" id="salidaTime">Hora salida: </label>
+      <button id="enviar" type="submit">Enviar</button>
+      <div id="total" style="display: none"></div>
+
+      <button onclick="reiniciar(event)" style="display: none" id="reset">
+        Reiniciar
+      </button>
     </form>
   </body>
 </html>
